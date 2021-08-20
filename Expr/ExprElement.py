@@ -3,14 +3,16 @@ class ExprElement():
 
     varName = None
 
-    def __init__(self, str):
+    def __init__(self, var):
         # print(type(str))
-        if str is not None and str != '':
-            self.varName = str
+        if var is not None and var != '':
+            self.varName = var
         else:
             self.varName = None
 
-    pass
+
+
+
 
     '''
         返回表达式类型
@@ -24,4 +26,4 @@ class ExprElement():
     def __repr__(self):
         if self.varName is None:
             return ''
-        return self.varName
+        return str(self.varName)

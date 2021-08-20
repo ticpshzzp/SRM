@@ -728,6 +728,15 @@ class testListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by testParser#bin_op.
+    def enterBin_op(self, ctx:testParser.Bin_opContext):
+        pass
+
+    # Exit a parse tree produced by testParser#bin_op.
+    def exitBin_op(self, ctx:testParser.Bin_opContext):
+        pass
+
+
     # Enter a parse tree produced by testParser#array_expr.
     def enterArray_expr(self, ctx:testParser.Array_exprContext):
         pass

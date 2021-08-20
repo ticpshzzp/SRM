@@ -10,8 +10,8 @@ class TailExpr(ExprElement):
         # print("--", type(var), var)
         # print("--", type(self.mVar))
         self.mTail = tail
-        print(self.mVar)
-        print(self.mTail)
+        # print(self.mVar)
+        # print(self.mTail)
 
 
     '''

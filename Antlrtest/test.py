@@ -3,6 +3,7 @@ from antlr4.InputStream import InputStream
 
 from Block.BlockImport import *
 # from Block.OpenPackageBlock import OpenPackageBlock
+from Block.ConstBlock import ConstBlock
 from testLexer import testLexer
 from testParser import testParser
 
@@ -18,18 +19,33 @@ if __name__ == '__main__':
     lexer = testLexer(input_stream)
     token_stream = CommonTokenStream(lexer)
     parser = testParser(token_stream)
-    tree = parser.decls()
+    tree = parser.expr()
 
-    print(tree.children[0])
-    print(tree.children[1])
-    print(type(tree.children[0]))
-    print(type(tree.children[1]))
-    print(type(tree))
+    # print(tree.children[0])
+    # print(tree.children[1])
+    # print(type(tree.children[0]))
+    # print(type(tree.children[1]))
+    # print(type(tree))
+    # print(tree.children[0])
+    # print(tree.children[1])
+    # print(type(tree.children[0]))
+    # print(type(tree.children[1]))
+    # print(type(tree))
 
 
-    opb = OpenPackageBlock(tree.children[1])
-    print(opb)
+    # opb = OpenPackageBlock(tree.children[1])
+    # print(opb)
 
+    # ConstBlock(tree.children[0]);
+    # print(tree.getRuleContext())
+    # print(tree.getText())
+    # print(tree.getRuleIndex())
+    # print(tree.getSourceInterval())
+    # print(tree.getTokens(134))
+    # print(tree.children[0].getText())
+    # tree.toStringTree()
+    print(tree.list_expr())
+    print(tree.id_expr().toStringTree(recog=parser))
 
     lisp_tree_str = tree.toStringTree(recog=parser)
     print(lisp_tree_str)

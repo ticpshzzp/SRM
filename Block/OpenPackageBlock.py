@@ -9,11 +9,11 @@ class OpenPackageBlock(BaseBlock):
 
     def __init__(self, ctx:testParser.testParser.PathContext):
         if len(ctx.children) & 1:
-            self.build(ctx)
+            self.Build(ctx)
         else:
             print("OpenPackageBlock::error")
 
-    def build(self, ctx:testParser.testParser.PathContext):
+    def Build(self, ctx:testParser.testParser.PathContext):
         length = len(ctx.children)//2
         tail = PathExpr(str(ctx.children[(length)*2]), ExprElement(None))
         for i in range(length):
