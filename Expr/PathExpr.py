@@ -8,8 +8,13 @@ class PathExpr(TailExpr):
     #     self.mTailer = tail
 
     '''
+<<<<<<< HEAD
             输出格式化
         '''
+=======
+        输出格式化
+    '''
+>>>>>>> 1019c1cd9a1955b7918d9526fcbec2bdc9039439
 
     def __repr__(self):
         rst = str(self.mVar)
